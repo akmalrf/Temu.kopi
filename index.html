@@ -1,0 +1,691 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="id">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Temu Coffee - Teman Kamu Ngopi</title>\
+    <!-- Link Font Pacifico dan Nunito dari Google Fonts -->\
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">\
+    <!-- Font Awesome untuk ikon sosial media -->\
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">\
+    <style>\
+        /* Palet Warna - Diperbarui sesuai Mood Board Retro Coffee */\
+        :root \{\
+            --cream-natural: #F4E9DD; /* Background utama (mirip F4E9DD) */\
+            --main-accent-orange: #D35E17; /* Judul & tombol utama (mirip D35E17) */\
+            --card-background-peach: #FAAF86; /* Card / section background (mirip FAAF86) */\
+            --secondary-accent-yellow: #F2AE1C; /* CTA button / secondary accent (mirip F2AE1C) */\
+            --dark-text-brown: #742D00; /* Teks utama / Footer background (mirip 742D00) */\
+        \}\
+\
+        /* Reset dan Base Styling */\
+        body \{\
+            font-family: 'Nunito', sans-serif; /* Font Gliker equivalent */\
+            margin: 0;\
+            padding: 0;\
+            background-color: var(--cream-natural);\
+            color: var(--dark-text-brown);\
+            line-height: 1.6;\
+            scroll-behavior: smooth;\
+        \}\
+\
+        a \{\
+            text-decoration: none;\
+            color: inherit;\
+        \}\
+\
+        /* Retro Checkered Pattern */\
+        .checkered-pattern \{\
+            background-image: repeating-conic-gradient(var(--main-accent-orange) 0% 25%, var(--cream-natural) 0% 50%);\
+            background-size: 40px 40px; /* Ukuran kotak-kotak */\
+            padding-top: 20px; /* Ruang di atas pola */\
+            padding-bottom: 20px; /* Ruang di bawah pola */\
+        \}\
+\
+        /* Header */\
+        .header \{\
+            background-color: var(--cream-natural);\
+            padding: 15px 5%;\
+            display: flex;\
+            justify-content: space-between;\
+            align-items: center;\
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);\
+            position: sticky;\
+            top: 0;\
+            z-index: 1000;\
+            border-bottom-left-radius: 10px;\
+            border-bottom-right-radius: 10px;\
+            /* Tambahkan pola kotak-kotak di sini */\
+            background-image: repeating-conic-gradient(var(--main-accent-orange) 0% 25%, var(--cream-natural) 0% 50%);\
+            background-size: 40px 40px; /* Ukuran kotak-kotak */\
+            padding-top: 20px;\
+            padding-bottom: 20px;\
+        \}\
+\
+        .header .logo img \{\
+            height: 40px; /* Sesuaikan tinggi logo sesuai kebutuhan */\
+            width: auto;\
+            transition: transform 0.3s ease;\
+        \}\
+\
+        .header .logo img:hover \{\
+            transform: scale(1.05);\
+        \}\
+\
+        .nav ul \{\
+            list-style: none;\
+            margin: 0;\
+            padding: 0;\
+            display: flex;\
+        \}\
+\
+        .nav ul li \{\
+            margin-left: 30px;\
+        \}\
+\
+        .nav ul li a \{\
+            font-weight: 500;\
+            transition: color 0.3s ease;\
+            padding: 5px 0;\
+            color: var(--dark-text-brown); /* Pastikan teks navigasi terlihat di atas pola */\
+        \}\
+\
+        .nav ul li a:hover \{\
+            color: var(--secondary-accent-yellow); /* Ubah warna hover agar kontras */\
+        \}\
+\
+        /* Hero Section */\
+        .hero-section \{\
+            background-color: var(--cream-natural);\
+            text-align: center;\
+            padding: 80px 5%;\
+            display: flex;\
+            flex-direction: column;\
+            align-items: center;\
+            justify-content: center;\
+            min-height: 80vh; /* Membuat hero lebih tinggi */\
+            position: relative;\
+            overflow: hidden;\
+        \}\
+\
+        .hero-section .hero-logo \{ /* Class baru untuk logo di hero section */\
+            max-width: 500px; /* Sesuaikan ukuran logo di hero */\
+            height: auto;\
+            border-radius: 20px; /* Lebih melengkung */\
+            margin-bottom: 40px;\
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);\
+            transition: transform 0.5s ease;\
+        \}\
+\
+        .hero-section .hero-logo:hover \{\
+            transform: scale(1.02);\
+        \}\
+\
+        .hero-section h1 \{\
+            font-family: 'Pacifico', cursive; /* Font Senty equivalent */\
+            font-size: 3.8em;\
+            color: var(--main-accent-orange);\
+            margin-bottom: 20px;\
+            line-height: 1.2;\
+            font-weight: 700;\
+        \}\
+\
+        .hero-section p \{\
+            font-size: 1.4em;\
+            color: var(--dark-text-brown);\
+            margin-bottom: 50px;\
+            max-width: 800px;\
+            font-weight: 400;\
+        \}\
+\
+        .hero-buttons .btn \{\
+            display: inline-block;\
+            padding: 18px 35px;\
+            margin: 0 15px;\
+            border-radius: 12px; /* Lebih melengkung */\
+            font-weight: 600;\
+            font-size: 1.2em;\
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;\
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\
+        \}\
+\
+        .hero-buttons .btn-menu \{\
+            background-color: var(--main-accent-orange);\
+            color: var(--cream-natural);\
+        \}\
+\
+        .hero-buttons .btn-menu:hover \{\
+            background-color: #b84e0e; /* Sedikit lebih gelap dari main-accent-orange */\
+            transform: translateY(-5px);\
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\
+        \}\
+\
+        .hero-buttons .btn-order \{\
+            background-color: var(--secondary-accent-yellow);\
+            color: var(--dark-text-brown); /* Teks gelap agar kontras dengan kuning */\
+        \}\
+\
+        .hero-buttons .btn-order:hover \{\
+            background-color: #d89b0f; /* Sedikit lebih gelap dari secondary-accent-yellow */\
+            transform: translateY(-5px);\
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\
+        \}\
+\
+        /* General Section Styling */\
+        .section \{\
+            padding: 100px 5%;\
+            text-align: center;\
+            background-color: var(--cream-natural);\
+        \}\
+\
+        .section:nth-of-type(even) \{\
+            background-color: var(--card-background-peach); /* Warna alternatif untuk section */\
+        \}\
+\
+        .section h2 \{\
+            font-family: 'Pacifico', cursive; /* Font Senty equivalent */\
+            font-size: 3em;\
+            color: var(--main-accent-orange);\
+            margin-bottom: 50px;\
+            position: relative;\
+            font-weight: 700;\
+        \}\
+\
+        .section h2::after \{\
+            content: '';\
+            display: block;\
+            width: 100px;\
+            height: 5px;\
+            background-color: var(--main-accent-orange);\
+            margin: 20px auto 0;\
+            border-radius: 3px;\
+        \}\
+\
+        /* About Us Section */\
+        .about-content \{\
+            max-width: 900px;\
+            margin: 0 auto;\
+            line-height: 2;\
+            font-size: 1.2em;\
+            color: var(--dark-text-brown);\
+            text-align: justify;\
+        \}\
+\
+        .about-content p \{\
+            margin-bottom: 20px;\
+        \}\
+\
+        /* Menu Section */\
+        .menu-grid \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\
+            gap: 40px;\
+            max-width: 1300px;\
+            margin: 0 auto;\
+        \}\
+\
+        .menu-category \{\
+            background-color: var(--card-background-peach);\
+            padding: 30px;\
+            border-radius: 15px;\
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);\
+            text-align: left;\
+            display: flex;\
+            flex-direction: column;\
+        \}\
+\
+        .menu-category h3 \{\
+            font-family: 'Pacifico', cursive; /* Font Senty equivalent */\
+            font-size: 2em;\
+            color: var(--main-accent-orange);\
+            margin-bottom: 30px;\
+            font-weight: 600;\
+            text-align: center;\
+        \}\
+\
+        .menu-item, .package-item \{\
+            background-color: var(--cream-natural); /* Item di dalam kategori */\
+            padding: 20px;\
+            border-radius: 10px;\
+            margin-bottom: 20px;\
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);\
+            transition: transform 0.2s ease, box-shadow 0.2s ease;\
+        \}\
+\
+        .menu-item:last-child, .package-item:last-child \{\
+            margin-bottom: 0;\
+        \}\
+\
+        .menu-item:hover, .package-item:hover \{\
+            transform: translateY(-3px);\
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);\
+        \}\
+\
+        .menu-item h4, .package-item h4 \{\
+            font-size: 1.5em;\
+            color: var(--dark-text-brown);\
+            margin-bottom: 8px;\
+            font-weight: 600;\
+        \}\
+\
+        .menu-item p, .package-item p \{\
+            font-size: 1em;\
+            color: var(--dark-text-brown);\
+            line-height: 1.7;\
+            opacity: 0.9;\
+        \}\
+\
+        .menu-item .options, .package-item .details \{\
+            font-size: 0.9em;\
+            color: var(--main-accent-orange);\
+            margin-top: 10px;\
+            font-weight: 500;\
+        \}\
+\
+        /* Contact Section */\
+        .contact-content \{\
+            max-width: 900px;\
+            margin: 0 auto;\
+            line-height: 1.8;\
+            font-size: 1.2em;\
+            color: var(--dark-text-brown);\
+        \}\
+\
+        .contact-info p \{\
+            margin-bottom: 15px;\
+        \}\
+\
+        .contact-info a \{\
+            color: var(--main-accent-orange);\
+            font-weight: 600;\
+            transition: color 0.3s ease;\
+        \}\
+\
+        .contact-info a:hover \{\
+            color: var(--secondary-accent-yellow);\
+            text-decoration: underline;\
+        \}\
+\
+        .map-container \{\
+            margin-top: 50px;\
+            margin-bottom: 40px;\
+            overflow: hidden;\
+            border-radius: 15px;\
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);\
+            height: 450px; /* Tinggi map */\
+            width: 100%;\
+            max-width: 900px;\
+            margin-left: auto;\
+            margin-right: auto;\
+        \}\
+\
+        .map-container iframe \{\
+            width: 100%;\
+            height: 100%;\
+            border: 0;\
+        \}\
+\
+        .btn-whatsapp \{\
+            background-color: var(--secondary-accent-yellow);\
+            color: var(--dark-text-brown); /* Teks gelap agar kontras dengan kuning */\
+            display: inline-block;\
+            padding: 18px 40px;\
+            border-radius: 12px;\
+            font-weight: 600;\
+            font-size: 1.3em;\
+            margin-top: 30px;\
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;\
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\
+        \}\
+\
+        .btn-whatsapp:hover \{\
+            background-color: #d89b0f; /* Sedikit lebih gelap dari secondary-accent-yellow */\
+            transform: translateY(-5px);\
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);\
+        \}\
+\
+        /* Footer */\
+        .footer \{\
+            background-color: var(--dark-text-brown);\
+            color: var(--cream-natural);\
+            padding: 50px 5%;\
+            text-align: center;\
+            font-size: 0.95em;\
+            border-top-left-radius: 10px;\
+            border-top-right-radius: 10px;\
+            /* Tambahkan pola kotak-kotak di sini */\
+            background-image: repeating-conic-gradient(var(--main-accent-orange) 0% 25%, var(--cream-natural) 0% 50%);\
+            background-size: 40px 40px; /* Ukuran kotak-kotak */\
+            padding-top: 20px;\
+            padding-bottom: 20px;\
+            /* Pastikan teks footer terlihat di atas pola */\
+            color: var(--dark-text-brown);\
+        \}\
+\
+        .footer .social-links a,\
+        .footer p \{\
+            z-index: 1; /* Pastikan konten footer di atas background */\
+            position: relative;\
+        \}\
+\
+        .social-links \{\
+            margin-bottom: 25px;\
+        \}\
+\
+        .social-links a \{\
+            color: var(--dark-text-brown); /* Ubah warna ikon agar kontras dengan pola */\
+            font-size: 2.2em;\
+            margin: 0 18px;\
+            transition: color 0.3s ease, transform 0.2s ease;\
+        \}\
+\
+        .social-links a:hover \{\
+            color: var(--secondary-accent-yellow); /* Ubah warna hover */\
+            transform: translateY(-3px);\
+        \}\
+\
+        /* Responsive Design */\
+        @media (max-width: 768px) \{\
+            .header \{\
+                flex-direction: column;\
+                padding: 15px 3%;\
+            \}\
+\
+            .nav ul \{\
+                margin-top: 15px;\
+                flex-wrap: wrap;\
+                justify-content: center;\
+            \}\
+\
+            .nav ul li \{\
+                margin: 0 15px 10px;\
+            \}\
+\
+            .hero-section \{\
+                padding: 60px 3%;\
+                min-height: 70vh;\
+            \}\
+\
+            .hero-section .hero-logo \{\
+                max-width: 80%; /* Sesuaikan ukuran logo di hero untuk mobile */\
+            \}\
+\
+            .hero-section h1 \{\
+                font-size: 2.8em;\
+            \}\
+\
+            .hero-section p \{\
+                font-size: 1.1em;\
+            \}\
+\
+            .hero-buttons \{\
+                display: flex;\
+                flex-direction: column;\
+                gap: 20px;\
+            \}\
+\
+            .hero-buttons .btn \{\
+                width: 80%;\
+                margin: 0 auto;\
+                padding: 15px 25px;\
+                font-size: 1.1em;\
+            \}\
+\
+            .section \{\
+                padding: 70px 3%;\
+            \}\
+\
+            .section h2 \{\
+                font-size: 2.2em;\
+            \}\
+\
+            .about-content, .contact-content \{\
+                font-size: 1em;\
+            \}\
+\
+            .menu-grid \{\
+                grid-template-columns: 1fr;\
+                gap: 30px;\
+            \}\
+\
+            .menu-category \{\
+                padding: 25px;\
+            \}\
+\
+            .menu-category h3 \{\
+                font-size: 1.8em;\
+            \}\
+\
+            .menu-item h4, .package-item h4 \{\
+                font-size: 1.3em;\
+            \}\
+\
+            .map-container \{\
+                height: 300px;\
+                margin-top: 30px;\
+            \}\
+\
+            .btn-whatsapp \{\
+                padding: 15px 30px;\
+                font-size: 1.1em;\
+            \}\
+\
+            .footer \{\
+                padding: 40px 3%;\
+            \}\
+\
+            .social-links a \{\
+                font-size: 1.8em;\
+                margin: 0 10px;\
+            \}\
+        \}\
+\
+        @media (max-width: 480px) \{\
+            .header .logo \{\
+                font-size: 1.5em;\
+            \}\
+\
+            .nav ul li \{\
+                margin: 0 10px 10px;\
+            \}\
+\
+            .hero-section h1 \{\
+                font-size: 2.2em;\
+            \}\
+\
+            .hero-section p \{\
+                font-size: 1em;\
+            \}\
+\
+            .section h2 \{\
+                font-size: 1.8em;\
+            \}\
+\
+            .menu-category h3 \{\
+                font-size: 1.5em;\
+            \}\
+\
+            .menu-item h4, .package-item h4 \{\
+                font-size: 1.2em;\
+            \}\
+        \}\
+    </style>\
+</head>\
+<body>\
+\
+    <!-- Header -->\
+    <header class="header">\
+        <a href="#home" class="logo">\
+            <!-- Logo Temu Coffee di Header -->\
+            <img src="logo kata.png" alt="Logo Temu Coffee">\
+        </a>\
+        <nav class="nav">\
+            <ul>\
+                <li><a href="#home">Beranda</a></li>\
+                <li><a href="#about">Tentang Kami</a></li>\
+                <li><a href="#menu">Menu</a></li>\
+                <li><a href="#contact">Lokasi & Kontak</a></li>\
+            </ul>\
+        </nav>\
+    </header>\
+\
+    <!-- Beranda Section -->\
+    <section id="home" class="hero-section">\
+        <!-- Logo Temu Coffee di tengah hero section -->\
+        <img src="logo kata.png" alt="Logo Temu Coffee" class="hero-logo">\
+        <h1>Teman Kamu Ngopi</h1>\
+        <p>Nikmati kopi terbaik dengan suasana hangat dan bersahabat. Temu Coffee, teman setia di setiap tegukanmu!</p>\
+        <div class="hero-buttons">\
+            <a href="#menu" class="btn btn-menu">Lihat Menu</a>\
+            <!-- Ganti nomor WhatsApp dengan nomor Temu Coffee yang sebenarnya -->\
+            <a href="https://wa.me/6281234567890?text=Halo%20Temu%20Coffee%2C%20saya%20mau%20pesan..." target="_blank" class="btn btn-order">Pesan Sekarang</a>\
+        </div>\
+    </section>\
+\
+    <!-- Tentang Kami Section -->\
+    <section id="about" class="section section-about">\
+        <h2>Tentang Kami</h2>\
+        <div class="about-content">\
+            <p>Temu Coffee hadir sebagai jawaban atas kerinduan akan tempat ngopi yang bukan sekadar menjual minuman, tapi juga menyajikan pengalaman. Filosofi "Teman Kamu" menjadi inti dari setiap cangkir yang kami sajikan. Kami percaya, setiap momen ngopi adalah kesempatan untuk menjalin koneksi dan berbagi cerita.</p>\
+            <p>Dengan konsep <em>street coffee</em> yang dinamis, kami siap menemani harimu dengan pelayanan yang cepat namun tetap ramah dan hangat. Baik kamu sedang terburu-buru atau ingin sejenak bersantai, Temu Coffee selalu ada untukmu.</p>\
+        </div>\
+    </section>\
+\
+    <!-- Menu Section -->\
+    <section id="menu" class="section section-menu">\
+        <h2>Menu Kami</h2>\
+        <div class="menu-grid">\
+            <!-- Kategori Minuman Kopi -->\
+            <div class="menu-category">\
+                <h3>Minuman Kopi</h3>\
+                <div class="menu-item">\
+                    <h4>Espresso</h4>\
+                    <p>Ekstrak kopi murni 100% Arabika.</p>\
+                    <div class="options">Pilihan: Panas</div>\
+                </div>\
+                <div class="menu-item">\
+                    <h4>Americano</h4>\
+                    <p>Espresso dengan tambahan air panas.</p>\
+                    <div class="options">Pilihan: Es / Panas</div>\
+                </div>\
+                <div class="menu-item">\
+                    <h4>Kopi Susu Gula Aren</h4>\
+                    <p>Espresso, susu segar, dan gula aren asli.</p>\
+                    <div class="options">Pilihan: Es / Panas</div>\
+                </div>\
+                <div class="menu-item">\
+                    <h4>V60 Manual Brew</h4>\
+                    <p>Seduhan kopi <em>single origin</em> pilihan dengan metode V60.</p>\
+                    <div class="options">Pilihan: Panas</div>\
+                </div>\
+                <div class="menu-item">\
+                    <h4>Latte</h4>\
+                    <p>Espresso dengan susu <em>steamed</em> lembut.</p>\
+                    <div class="options">Pilihan: Es / Panas</div>\
+                </div>\
+                <div class="menu-item">\
+                    <h4>Es Kopi Temu (Signature)</h4>\
+                    <p>Racikan kopi spesial Temu Coffee dengan sentuhan unik.</p>\
+                    <div class="options">Pilihan: Es</div>\
+                </div>\
+            </div>\
+\
+            <!-- Kategori Non-Kopi -->\
+            <div class="menu-category">\
+                <h3>Non-Kopi</h3>\
+                <div class="menu-item">\
+                    <h4>Matcha Latte</h4>\
+                    <p>Bubuk matcha premium dengan susu segar.</p>\
+                    <div class="options">Pilihan: Es / Panas</div>\
+                </div>\
+                <div class="menu-item">\
+                    <h4>Coklat Ice / Hot</h4>\
+                    <p>Coklat pilihan yang kaya rasa.</p>\
+                    <div class="options">Pilihan: Es / Panas</div>\
+                </div>\
+                <div class="menu-item">\
+                    <h4>Lemon Tea</h4>\
+                    <p>Teh segar dengan ekstrak lemon.</p>\
+                    <div class="options">Pilihan: Es / Panas</div>\
+                </div>\
+                <div class="menu-item">\
+                    <h4>Yakult Tea</h4>\
+                    <p>Perpaduan teh dan kesegaran Yakult.</p>\
+                    <div class="options">Pilihan: Es</div>\
+                </div>\
+            </div>\
+\
+            <!-- Kategori Roti (Snack Ringan) -->\
+            <div class="menu-category">\
+                <h3>Roti (Snack Ringan)</h3>\
+                <div class="menu-item">\
+                    <h4>Roti Panggang Isi Coklat</h4>\
+                    <p>Roti panggang lembut dengan isian coklat lumer.</p>\
+                </div>\
+                <div class="menu-item">\
+                    <h4>Roti Panggang Isi Keju</h4>\
+                    <p>Roti panggang lembut dengan isian keju gurih.</p>\
+                </div>\
+                <div class="menu-item">\
+                    <h4>Roti Panggang Isi Kopi</h4>\
+                    <p>Roti panggang lembut dengan isian krim kopi.</p>\
+                </div>\
+            </div>\
+\
+            <!-- Menu Paket -->\
+            <div class="menu-category">\
+                <h3>Menu Paket</h3>\
+                <div class="package-item">\
+                    <h4>Temu Pagi</h4>\
+                    <p class="details">Es Kopi Temu + Roti Panggang Keju</p>\
+                </div>\
+                <div class="package-item">\
+                    <h4>Temu Sore</h4>\
+                    <p class="details">Coklat + Roti Coklat</p>\
+                </div>\
+                <div class="package-item">\
+                    <h4>Temu Malam</h4>\
+                    <p class="details">V60 + Roti Keju</p>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- Lokasi & Kontak Section -->\
+    <section id="contact" class="section section-contact">\
+        <h2>Temukan Kami!</h2>\
+        <div class="contact-content">\
+            <div class="contact-info">\
+                <p>Untuk pemesanan atau pertanyaan lebih lanjut, hubungi kami:</p>\
+                <p>WhatsApp: <a href="https://wa.me/6281234567890" target="_blank">0812-3456-7890</a></p>\
+                <p>Instagram: <a href="https://www.instagram.com/temucoffee" target="_blank">@temucoffee</a></p>\
+            </div>\
+            <div class="map-container">\
+                <!-- Ganti src dengan embed code Google Maps lokasi Anda -->\
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.81846215000001!3d-6.1952691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f43000000001%3A0x6d2e69f430000000!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1678901234567!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>\
+            </div>\
+            <a href="https://wa.me/6281234567890?text=Halo%20Temu%20Coffee%2C%20saya%20mau%20pesan..." target="_blank" class="btn-whatsapp">Pesan via WhatsApp</a>\
+        </div>\
+    </section>\
+\
+    <!-- Footer -->\
+    <footer class="footer">\
+        <div class="social-links">\
+            <a href="https://www.instagram.com/temucoffee" target="_blank" aria-label="Instagram Temu Coffee"><i class="fab fa-instagram"></i></a>\
+            <!-- Tambahkan ikon sosial media lain jika ada -->\
+            <!-- <a href="#" target="_blank" aria-label="Facebook Temu Coffee"><i class="fab fa-facebook-f"></i></a> -->\
+            <!-- <a href="#" target="_blank" aria-label="Twitter Temu Coffee"><i class="fab fa-twitter"></i></a> -->\
+        </div>\
+        <p>&copy; 2025 Temu Coffee. All Rights Reserved.</p>\
+    </footer>\
+\
+</body>\
+</html>\
+}
